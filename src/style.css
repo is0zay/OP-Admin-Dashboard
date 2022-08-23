@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.container {
+    display: grid;
+    grid-column: 25vw 75vw;
+    grid-row: 20vw 80vw;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content";
+
+}
+
+.header-section {
+    grid-area: header;
+    display: grid;
+}
+
+.sidebar-section {
+    grid-area: sidebar;
+    display: grid;
+}
+
+.main-content {
+    grid-area: main-content;
+    display: grid;
+}
