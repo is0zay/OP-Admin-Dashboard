@@ -1,11 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
-#container {
+.container {
     display: grid;
+    grid-column: 30vw 70vw;
+    grid-row: 20vh 80vh ;
     grid-template-areas: 
     "sidebar header"
     "sidebar main-content";
@@ -15,6 +11,7 @@
 .header-section {
     background-color: #fafafa;
     grid-area: header;
+    padding: 1.5rem;
     display: grid;
 }
 .search {
@@ -65,6 +62,7 @@
 .sidebar-section {
     grid-area: sidebar;
     display: grid;
+    padding: 1.5rem;
     grid-row: 1fr 2fr 2fr ;
     grid-template-areas: 
     "top"

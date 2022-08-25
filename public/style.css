@@ -551,23 +551,86 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
+#container {
   display: grid;
-  grid-column: 25vw 75vw;
-  grid-row: 20vw 80vw;
   grid-template-areas: 
     "sidebar header"
     "sidebar main-content";
 }
 
 .header-section {
+  background-color: #fafafa;
   grid-area: header;
   display: grid;
+}
+
+.search {
+  background-color: #d4d4d8;
+  border-radius: 5px;
+}
+
+.top-head {
+  display: flex;
+}
+
+.left-top-head {
+  float: left;
+  display: flex;
+}
+
+.right-top-head {
+  float: right;
+  display: flex;
+}
+
+.bottom-head {
+  display: flex;
+}
+
+.bottom-head-left {
+  float: left;
+  display: flex;
+}
+
+.usertop {
+  display: grid;
+}
+
+.bottom-head-right {
+  float: right;
+  display: flex;
+}
+
+.topBtn {
+  color: white;
+  background-color: #fb923c;
+  border-radius: 5px;
+  padding: 8px;
+  width: 6rem;
 }
 
 .sidebar-section {
   grid-area: sidebar;
   display: grid;
+  grid-row: 1fr 2fr 2fr ;
+  grid-template-areas: 
+    "top"
+    "second"
+    "third";
+  color: azure;
+  background-color: #fb923c;
+}
+
+.side-top-section {
+  grid-area: top;
+}
+
+.side-second-section {
+  grid-area: second;
+}
+
+.side-third-section {
+  grid-area: third;
 }
 
 .main-content {
