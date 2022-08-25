@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-column: 30vw 70vw;
+    grid-column: 35vw 65vw;
     grid-row: 20vh 80vh ;
     grid-template-areas: 
     "sidebar header"
@@ -17,37 +17,90 @@
 .search {
     background-color: #d4d4d8;
     border-radius: 5px;
+    width: 40vw;
+    
 }
 
 .top-head {
-    display: flex;
+    display: grid;
+    grid-column: 80% 20%;
+    grid-template-areas: "lft rght";
 }
 
 .left-top-head {
+
+    grid-area: lft;
     float: left;
-    display: flex;
+    display: grid;
+    grid-column: .5fr 1fr;
+    grid-template-areas: "img bar";
+    gap: 0px;
+    align-items: center;
+}
+
+.left-top-search-img {
+    grid-area: img;
+}
+.left-top-search-bar {
+    grid-area: bar;
 }
 
 .right-top-head {
+    grid-area: rght;
     float: right;
-    display: flex;
+    display: grid;
+    grid-column: 1fr 1fr 2fr;
+    grid-template-areas: "noti logo name";
+    align-items: center;
+}
+
+#top-noti {
+    grid-area: noti;
+}
+
+#top-logo {
+    grid-area: logo;
+}
+
+#top-name {
+    grid-area: name;
 }
 
 .bottom-head {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "btmLeft btmRight";
+    align-items: center;
+
 }
 
 .bottom-head-left {
-    float: left;
+    align-items: center;
+    grid-area: btmLeft;
     display: flex;
 }
 
 .usertop {
     display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "top-top"
+    "top-bottom";
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#top-top {
+    grid-area: top-top;
+}
+
+#top-bottom {
+    grid-area: top-bottom;
 }
 
 .bottom-head-right {
-    float: right;
+    grid-area: btmRight;
     display: flex;
 }
 
