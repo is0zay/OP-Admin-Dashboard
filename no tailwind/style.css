@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-column: 35vw 65vw;
+    grid-column: 40vw 60vw;
     grid-row: 20vh 80vh ;
     grid-template-areas: 
     "sidebar header"
@@ -68,7 +68,7 @@
 
 .bottom-head {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-column: 80% 20%;
     grid-template-areas: "btmLeft btmRight";
     align-items: center;
 
@@ -86,9 +86,7 @@
     grid-template-areas:
     "top-top"
     "top-bottom";
-    gap: 0;
-    margin: 0;
-    padding: 0;
+    
 }
 
 #top-top {
@@ -101,13 +99,15 @@
 
 .bottom-head-right {
     grid-area: btmRight;
-    display: flex;
+    display: grid;
+    padding-left: 20rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .topBtn {
     color: white;
     background-color: #fb923c;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 8px;
     width: 6rem;
 }
@@ -116,11 +116,11 @@
     grid-area: sidebar;
     display: grid;
     padding: 1.5rem;
-    grid-row: 1fr 2fr 2fr ;
+    grid-row: 10vh 30vh 20vh;
     grid-template-areas: 
     "top"
     "second"
-    "third";
+    "third"; 
     color: azure;
     background-color: #fb923c;
 }
@@ -128,14 +128,41 @@
     grid-area: top;
     
 }
+.side-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .side-second-section {
     grid-area: second;
+    display: grid;
+    gap: 2px;
 }
 .side-third-section {
     grid-area: third;
+    display: grid;
+    gap: 2px;
 }
 
 .main-content {
     grid-area: main-content;
     display: grid;
+    grid-column: 3fr 1fr;
+    grid-row: 1fr 1fr;
+    grid-template-areas:
+    "project announcements"
+    "project trending";
+}
+
+.projects-grid {
+    grid-area: project;
+}
+
+.announcements-grid {
+    grid-area: announcements;
+}
+
+.trending-grid {
+    grid-area: trending;
 }
