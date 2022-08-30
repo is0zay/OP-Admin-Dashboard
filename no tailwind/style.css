@@ -1,7 +1,11 @@
+* {
+    font-family: Roboto;
+}
 .container {
+    background-color: #ececec;
     display: grid;
-    grid-column: 40vw 60vw;
-    grid-row: 20vh 80vh ;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 30vh 70vh ;
     grid-template-areas: 
     "sidebar header"
     "sidebar main-content";
@@ -9,7 +13,7 @@
 }
 
 .header-section {
-    background-color: #fafafa;
+    background-color: white;
     grid-area: header;
     padding: 1.5rem;
     display: grid;
@@ -116,7 +120,7 @@
     grid-area: sidebar;
     display: grid;
     padding: 1.5rem;
-    grid-row: 10vh 30vh 20vh;
+    grid-template-rows: 10vh 30vh 20vh;
     grid-template-areas: 
     "top"
     "second"
@@ -148,8 +152,8 @@
 .main-content {
     grid-area: main-content;
     display: grid;
-    grid-column: 3fr 1fr;
-    grid-row: 1fr 1fr;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(2,1fr);
     grid-template-areas:
     "project announcements"
     "project trending";
@@ -157,6 +161,31 @@
 
 .projects-grid {
     grid-area: project;
+    display: grid;
+    gap: 10px;
+    padding: 4px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+
+
+}
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 2% 98%;
+    grid-template-areas: "stripe proj";
+    gap: 1rem;
+}
+
+.stripe {
+    grid-area: stripe;
+    background-color: #164e63;
+    border-radius: 2px;
+}
+
+.proj {
+    grid-area: proj;
 }
 
 .announcements-grid {
