@@ -1,11 +1,14 @@
 * {
     font-family: Roboto;
 }
+p {
+    font-size: 1rem;
+}
 .container {
     background-color: #ececec;
     display: grid;
     grid-template-columns: 15vw 85vw;
-    grid-template-rows: 30vh 70vh ;
+    grid-template-rows: 25vh 75vh ;
     grid-template-areas: 
     "sidebar header"
     "sidebar main-content";
@@ -153,10 +156,11 @@
     grid-area: main-content;
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: 50% 50%;
     grid-template-areas:
     "project announcements"
     "project trending";
+    gap: 1rem;
 }
 
 .projects-grid {
@@ -175,7 +179,7 @@
     display: grid;
     grid-template-columns: 2% 98%;
     grid-template-areas: "stripe proj";
-    gap: 1rem;
+    gap: .75rem;
 }
 
 .stripe {
@@ -188,10 +192,32 @@
     grid-area: proj;
 }
 
+.proj > p {
+    font-size: smaller;
+    padding-right: .25rem;
+}
+
 .announcements-grid {
     grid-area: announcements;
 }
 
+.top-right-grid {
+    background-color: white;
+    display: grid;
+    line-height: .75rem;
+
+}
+
+.announcementsInfo {
+
+}
+.announcementsInfo > p {
+    font-size: x-small;
+}
+
+
+
 .trending-grid {
+    margin-top: 5rem;
     grid-area: trending;
 }
